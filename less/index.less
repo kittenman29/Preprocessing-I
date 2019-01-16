@@ -55,17 +55,88 @@ table {
 
 html, body {
 	height: 100%;
-	max-width: 1024px;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 p {
 	font-size: 1rem;
-	margin: .625rem;
+	margin: .625rem 0;
 	line-height: 1.25;
+}
+
+h2, h3 {
+	font-size: 1.75rem;
+	margin: 1rem;
 }
 
 // Variables
 @backgroundGray: #E2DCDC;
 @gridGray: #CAC4C4;
+@fontSans: sans-serif;
+
+// Mixins
+.flexin() {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.goodMargin() {
+	margin: @goodMargin @goodMargin;
+}
+
+// Nav Bar
+header {
+	margin: 20px auto;
+	text-align: end;
+	nav a {
+		text-decoration: none;
+		color: black;
+		font-family: @fontSans;
+		margin: 0 2%;
+	}
+
+}
+
+// Main Body Container
+.resumeBody {
+	background: @backgroundGray;
+	height: 36rem;
+	display: block;
+	font-family: @fontSans;
+	h1 {
+		font-size: 2.5rem;
+		margin: 1rem;
+	}
+	img {
+		margin: 1rem;
+	}
+	p {
+		margin: 1rem;
+	}
+	button {
+		background-color: darkslategray;
+		border: 1px solid black;
+		border-radius: .3rem;
+		padding: .3rem 1.3rem;
+		margin: 1rem;
+		color: white;
+	}
+}
+
+.aboutMe&Skills {
+	display: flex;
+	justify-content: space-around;
+	height: 20rem;
+	width: 45%;
+	margin: 0 2%;
+}
+
+
+
+
+
+
 
 
