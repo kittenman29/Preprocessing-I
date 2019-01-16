@@ -68,6 +68,7 @@ p {
 h2, h3 {
 	font-size: 1.75rem;
 	margin: 1rem;
+	font-family: @fontSans;
 }
 
 // Variables
@@ -89,6 +90,7 @@ h2, h3 {
 // Nav Bar
 header {
 	margin: 20px auto;
+	width: 95%;
 	text-align: end;
 	nav a {
 		text-decoration: none;
@@ -102,6 +104,8 @@ header {
 // Main Body Container
 .resumeBody {
 	background: @backgroundGray;
+	max-width: 95%;
+    margin: 0 auto;
 	height: 36rem;
 	display: block;
 	font-family: @fontSans;
@@ -129,7 +133,6 @@ header {
 .secondaryContent {
 	display: flex;
 	justify-content: space-around;
-	border: 1px solid red;
 	.aboutMe {
 		max-width: 45%;
 		margin: 4%;
@@ -152,8 +155,42 @@ header {
 }
 
 // Footer Grid
+.workHistory h2{
+	margin-left: 5%;
+}
 
+.gridContainer {
+	margin: 3rem;
+    display: grid;
+	height: 200px;
+	font-family: @fontSans;
+    grid-template-columns: 10% 30% 40% 20%;
+	grid-template-rows: 25%;
+	grid-template-areas:
+		"header header header header"
+		"arturo arturo arturo arturo"
+		"trivent trivent trivent trivent"
+		"dor dor dor dor";
 
+		.header {
+			grid-row: 1;
+			font-weight: bold;
+			font-size: 1.5rem;
+			background-color: @backgroundGray;
+		}
+		.arturo {
+			grid-row: 2;
+			background-color: @gridGray;
+		}
+		.thrivent {
+			grid-row: 3;
+			background-color: @backgroundGray
+		}
+		.dor {
+			grid-row: 4;
+			background-color: @gridGray;
+		}
+}
 
 
 // Copyright
@@ -161,6 +198,8 @@ address {
 	.flexin;
 	background-color: @gridGray;
 	height: 4rem;
+	width: 95%;
+	margin: 0 auto;
 }
 
 
