@@ -79,7 +79,7 @@ h2, h3 {
 .flexin() {
 	display: flex;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 }
 
 .goodMargin() {
@@ -125,13 +125,44 @@ header {
 	}
 }
 
-.aboutMe&Skills {
+// About Me and Skills Section
+.secondaryContent {
 	display: flex;
 	justify-content: space-around;
-	height: 20rem;
-	width: 45%;
-	margin: 0 2%;
+	border: 1px solid red;
+	.aboutMe {
+		max-width: 45%;
+		margin: 4%;
+	}
+	.skillsContainer {
+		margin: 4%;
+		text-align: center;
+		nav a {
+			display: block;
+			text-decoration: none;
+			color: black;
+			font-family: sans-serif;
+			text-align: center;
+			border: 1px solid gray;
+			padding: .3rem 6.5rem;
+			margin: .3rem;
+			background-color: @backgroundGray;
+		}
+	}
 }
+
+// Footer Grid
+
+
+
+
+// Copyright
+address {
+	.flexin;
+	background-color: @gridGray;
+	height: 4rem;
+}
+
 
 
 
