@@ -74,7 +74,7 @@ h2, h3 {
 // Variables
 @backgroundGray: #E2DCDC;
 @gridGray: #CAC4C4;
-@fontSans: sans-serif;
+@fontSans: Baloo Tamma, cursive;
 
 // Mixins
 .flexin() {
@@ -106,15 +106,16 @@ header {
 	background: @backgroundGray;
 	max-width: 95%;
     margin: 0 auto;
-	height: 36rem;
+	height: 37rem;
 	display: block;
 	font-family: @fontSans;
 	h1 {
 		font-size: 2.5rem;
 		margin: 1rem;
 	}
-	img {
+	.responsive {
 		margin: 1rem;
+		max-width: 100%;
 	}
 	p {
 		margin: 1rem;
@@ -126,6 +127,16 @@ header {
 		padding: .3rem 1.3rem;
 		margin: 1rem;
 		color: white;
+	}
+	@media (max-width: 500px) {
+		height: 37rem;
+		h1 {
+			font-size: 1.75rem;
+		}
+		.responsive {
+			margin: 0 auto;
+			max-width: 100%;
+		}
 	}
 }
 
@@ -152,11 +163,28 @@ header {
 			background-color: @backgroundGray;
 		}
 	}
+	@media (max-width: 500px) {
+		display: block;
+		width: 95%;
+		margin: .5rem auto;
+		h2 {
+			text-align: center;
+		}
+		.aboutMe {
+			max-width: 95%;
+			margin: 4%;
+		}
+	}
 }
 
 // Footer Grid
 .workHistory h2{
 	margin-left: 5%;
+}
+@media (max-width: 500px) {
+	.workHistory h2 {
+		text-align: center;
+	}
 }
 
 .gridContainer {
@@ -190,6 +218,14 @@ header {
 			grid-row: 4;
 			background-color: @gridGray;
 		}
+		@media (max-width: 500px) {
+			margin: 1rem auto;
+			width: 95%;
+			font-size: 80%;
+			.header {
+				font-size: .75rem;
+			}
+		}
 }
 
 
@@ -200,6 +236,7 @@ address {
 	height: 4rem;
 	width: 95%;
 	margin: 0 auto;
+	font-family: @fontSans;
 }
 
 

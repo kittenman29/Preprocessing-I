@@ -145,7 +145,7 @@ h2,
 h3 {
   font-size: 1.75rem;
   margin: 1rem;
-  font-family: sans-serif;
+  font-family: Baloo Tamma, cursive;
 }
 header {
   margin: 20px auto;
@@ -155,23 +155,24 @@ header {
 header nav a {
   text-decoration: none;
   color: black;
-  font-family: sans-serif;
+  font-family: Baloo Tamma, cursive;
   margin: 0 2%;
 }
 .resumeBody {
   background: #E2DCDC;
   max-width: 95%;
   margin: 0 auto;
-  height: 36rem;
+  height: 37rem;
   display: block;
-  font-family: sans-serif;
+  font-family: Baloo Tamma, cursive;
 }
 .resumeBody h1 {
   font-size: 2.5rem;
   margin: 1rem;
 }
-.resumeBody img {
+.resumeBody .responsive {
   margin: 1rem;
+  max-width: 100%;
 }
 .resumeBody p {
   margin: 1rem;
@@ -183,6 +184,18 @@ header nav a {
   padding: 0.3rem 1.3rem;
   margin: 1rem;
   color: white;
+}
+@media (max-width: 500px) {
+  .resumeBody {
+    height: 37rem;
+  }
+  .resumeBody h1 {
+    font-size: 1.75rem;
+  }
+  .resumeBody .responsive {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 .secondaryContent {
   display: flex;
@@ -207,14 +220,33 @@ header nav a {
   margin: 0.3rem;
   background-color: #E2DCDC;
 }
+@media (max-width: 500px) {
+  .secondaryContent {
+    display: block;
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+  .secondaryContent h2 {
+    text-align: center;
+  }
+  .secondaryContent .aboutMe {
+    max-width: 95%;
+    margin: 4%;
+  }
+}
 .workHistory h2 {
   margin-left: 5%;
+}
+@media (max-width: 500px) {
+  .workHistory h2 {
+    text-align: center;
+  }
 }
 .gridContainer {
   margin: 3rem;
   display: grid;
   height: 200px;
-  font-family: sans-serif;
+  font-family: Baloo Tamma, cursive;
   grid-template-columns: 10% 30% 40% 20%;
   grid-template-rows: 25%;
   grid-template-areas: "header header header header" "arturo arturo arturo arturo" "trivent trivent trivent trivent" "dor dor dor dor";
@@ -237,6 +269,16 @@ header nav a {
   grid-row: 4;
   background-color: #CAC4C4;
 }
+@media (max-width: 500px) {
+  .gridContainer {
+    margin: 1rem auto;
+    width: 95%;
+    font-size: 80%;
+  }
+  .gridContainer .header {
+    font-size: 0.75rem;
+  }
+}
 address {
   display: flex;
   justify-content: center;
@@ -245,4 +287,5 @@ address {
   height: 4rem;
   width: 95%;
   margin: 0 auto;
+  font-family: Baloo Tamma, cursive;
 }
