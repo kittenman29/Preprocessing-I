@@ -54,6 +54,196 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	max-width: 900px;
+	margin: 0 auto;
 }
+
+p {
+	font-size: 1rem;
+	margin: .625rem 0;
+	line-height: 1.25;
+}
+
+h2, h3 {
+	font-size: 1.75rem;
+	margin: 1rem;
+	font-family: @fontSans;
+}
+
+// Variables
+@backgroundGray: #E2DCDC;
+@gridGray: #CAC4C4;
+@fontSans: Baloo Tamma, cursive;
+
+// Mixins
+.flexin() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.goodMargin() {
+	margin: @goodMargin @goodMargin;
+}
+
+// Nav Bar
+header {
+	margin: 20px auto;
+	width: 95%;
+	text-align: end;
+	nav a {
+		text-decoration: none;
+		color: black;
+		font-family: @fontSans;
+		margin: 0 2%;
+	}
+
+}
+
+// Main Body Container
+.resumeBody {
+	background: @backgroundGray;
+	max-width: 95%;
+    margin: 0 auto;
+	height: 37rem;
+	display: block;
+	font-family: @fontSans;
+	h1 {
+		font-size: 2.5rem;
+		margin: 1rem;
+	}
+	.responsive {
+		margin: 1rem;
+		max-width: 100%;
+	}
+	p {
+		margin: 1rem;
+	}
+	button {
+		background-color: darkslategray;
+		border: 1px solid black;
+		border-radius: .3rem;
+		padding: .3rem 1.3rem;
+		margin: 1rem;
+		color: white;
+	}
+	@media (max-width: 500px) {
+		height: 37rem;
+		h1 {
+			font-size: 1.75rem;
+		}
+		.responsive {
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+}
+
+// About Me and Skills Section
+.secondaryContent {
+	display: flex;
+	justify-content: space-around;
+	.aboutMe {
+		max-width: 45%;
+		margin: 4%;
+	}
+	.skillsContainer {
+		margin: 4%;
+		text-align: center;
+		nav a {
+			display: block;
+			text-decoration: none;
+			color: black;
+			font-family: sans-serif;
+			text-align: center;
+			border: 1px solid gray;
+			padding: .3rem 6.5rem;
+			margin: .3rem;
+			background-color: @backgroundGray;
+		}
+	}
+	@media (max-width: 500px) {
+		display: block;
+		width: 95%;
+		margin: .5rem auto;
+		h2 {
+			text-align: center;
+		}
+		.aboutMe {
+			max-width: 95%;
+			margin: 4%;
+		}
+	}
+}
+
+// Footer Grid
+.workHistory h2{
+	margin-left: 5%;
+}
+@media (max-width: 500px) {
+	.workHistory h2 {
+		text-align: center;
+	}
+}
+
+.gridContainer {
+	margin: 3rem;
+    display: grid;
+	height: 200px;
+	font-family: @fontSans;
+    grid-template-columns: 10% 30% 40% 20%;
+	grid-template-rows: 25%;
+	grid-template-areas:
+		"header header header header"
+		"arturo arturo arturo arturo"
+		"trivent trivent trivent trivent"
+		"dor dor dor dor";
+
+		.header {
+			grid-row: 1;
+			font-weight: bold;
+			font-size: 1.5rem;
+			background-color: @backgroundGray;
+		}
+		.arturo {
+			grid-row: 2;
+			background-color: @gridGray;
+		}
+		.thrivent {
+			grid-row: 3;
+			background-color: @backgroundGray
+		}
+		.dor {
+			grid-row: 4;
+			background-color: @gridGray;
+		}
+		@media (max-width: 500px) {
+			margin: 1rem auto;
+			width: 95%;
+			font-size: 80%;
+			.header {
+				font-size: .75rem;
+			}
+		}
+}
+
+
+// Copyright
+address {
+	.flexin;
+	background-color: @gridGray;
+	height: 4rem;
+	width: 95%;
+	margin: 0 auto;
+	font-family: @fontSans;
+}
+
+
+
+
+
+
+
+
 
